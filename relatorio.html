@@ -1,12 +1,11 @@
 <!doctype html>
 <html lang="pt-BR">
- <head><script>window["__codeletBootstrap__"]=JSON.parse('{"A":"A","B":"20260810-05-2b86cd6","C":{"Abril Fatface":"YACgEZbkUVE,0","Alfa Slab One":"YACgEYS9sJU,0","Anton":"YACgEcYqQ-A,0","Archivo":"YAHO2-t-jNE,0","Arial":"YAGyDvJ_4Ts,0","Bebas Neue":"YACgESME5ew,0","Bricolage Grotesque":"YAFyMcdwzpc,0","Canva Sans":"YAFLd8sKbwc,2","Caveat":"YALBs2ploWQ,0","Comic Sans MS":"YAHO2VMiyZo,0","Cormorant Garamond":"YAFdJhX-538,0","Courier New":"YAGzXiGs0_8,0","DM Sans":"YAD1aU3sLnI,0","DM Serif Display":"YAD1aYG82rc,0","Forum":"YACgEcnnqB4,0","Fraunces":"YAEul-FRQw4,0","Georgia":"YAGzXkO0pEM,0","Helvetica Neue":"YAFcf6CtJfI,0","Impact":"YAFcfnjI7Vk,0","Inter":"YAFdJvSyp_k,3","Iowan Old Style":"YAGNIFa8j9o,0","Jacques Francois":"YAHO2a5g66Q,0","JetBrains Mono":"YAFdJksXcAk,0","Libre Baskerville":"YACgEUFdPdA,0","Manrope":"YAHO2b2feC4,0","Merriweather":"YACgEXvHxxs,0","Montserrat":"YADLjI9qxTA,0","Nunito":"YACgEX8C5Gg,0","Oleo Script":"YACgEQQ14jI,0","Phantom Sans":"YAHO2E8Pb88,0","Playfair Display":"YACgEYmuCJE,0","Poppins":"YAFdJjbTu24,1","Press Start 2P":"YAFyGr-8pmQ,0","Quicksand":"YADWjpfPmdk,0","Raleway":"YACgEVg3xZg,0","Segoe UI":"YAHNdRD1Klw,0","Source Sans 3":"YAG4lO1Mj10,0","Spectral":"YAHO2rVUHIM,0","Times New Roman":"YAGzXW3gftg,0","Times":"YAGzXW3gftg,0","Ubuntu":"YACgERDU--Q,0","Work Sans":"YAGXhLOKv44,0","Yellowtail":"YACgEYG4kG4,0","ui-monospace":"YADlN8CFZ8Q,0","ui-sans-serif":"YACkoN-xg4g,0"}}');</script><script src="/_sdk/7949ff62d67710d5.telemetry_sdk.js" integrity="sha512-KIvXA82Di44YY/RH9/63A9MuTuavYgDFG8PfErJn7Wli4K0LAOk+coo/aPXk3+ZNL96nHh9VYD4PE+fLes+laQ=="></script>
+ <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Relatório Técnico</title>
+  <title>Relatório Técnico & Guia de Recomendações</title>
   <script src="https://cdn.tailwindcss.com/3.4.17"></script>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet">
-  <script src="/_sdk/0e8d3a91e1c6f495.data_sdk.js" integrity="sha512-c00oDoGjsMgluCLLEyVl3suwEkgjOGGplVFbsilUoBg4aMKNmsL3mwsc9r0dPn95qiSZyjBousQXgROkAW7p/w=="></script>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
         body { font-family: 'DM Sans', sans-serif; }
         .section-title { color: #1e40af; font-weight: 700; font-size: 1.1rem; margin-bottom: 0.5rem; }
@@ -14,284 +13,330 @@
         textarea:focus, input[type="text"]:focus { transition: border-color 0.2s ease; }
     </style>
   <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js" type="text/javascript"></script>
-  <script src="/_sdk/04cc6185e046f597.resizing_sdk.js" type="text/javascript" integrity="sha512-CiE/G92aQF0nxneFg1kdOvXih8sQ1Z2a2QI3+r/WvzJwQqH6+IyB3iL07OkJmpm3ABAaf07+FnqWny98f5sR6w=="></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
  </head>
- <body data-template-id="__page-root" class="min-h-screen p-4 md:p-8 bg-gray-50">
+ <body class="min-h-screen p-4 md:p-8 bg-gray-50">
   <main class="max-w-4xl mx-auto">
-   <header class="text-center mb-8">
-    <h1 data-template-id="page-title" class="canva-text font-bold border-b-4 border-yellow-400 inline-block pb-1 text-3xl text-blue-900">Relatório Técnico</h1>
-   </header>
-   <form id="report-form" class="space-y-6 bg-white rounded-xl p-6 md:p-8 shadow-md">
-    <!-- Group Info -->
-    <div class="space-y-3">
-     <div>
-      <label data-template-id="label-nome-grupo" class="canva-text font-medium" for="nome_grupo">Nome do Grupo:</label> <input id="nome_grupo" type="text" class="w-full border-b-2 border-gray-300 focus:border-blue-600 outline-none py-1 mt-1">
-     </div>
-     <div>
-      <label data-template-id="label-problema" class="canva-text font-medium" for="problema_digital">Problema Digital Identificado:</label> <input id="problema_digital" type="text" class="w-full border-b-2 border-gray-300 focus:border-blue-600 outline-none py-1 mt-1">
-     </div>
-     <div>
-      <label data-template-id="label-area" class="canva-text font-medium" for="area_conhecimento">Área do Conhecimento:</label> <input id="area_conhecimento" type="text" class="w-full border-b-2 border-gray-300 focus:border-blue-600 outline-none py-1 mt-1">
-     </div>
-    </div><!-- Section 1 & 3 side by side -->
-    <div class="grid md:grid-cols-2 gap-6">
+   <nav class="flex justify-between items-center mb-6 bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+    <button type="button" onclick="switchPage(1)" id="nav-btn-1" class="px-4 py-2 rounded-lg font-semibold text-sm bg-blue-600 text-white shadow transition-all">
+     Página 1: Relatório Técnico
+    </button>
+    <button type="button" onclick="switchPage(2)" id="nav-btn-2" class="px-4 py-2 rounded-lg font-semibold text-sm bg-gray-200 text-gray-700 hover:bg-gray-300 transition-all flex items-center gap-1">
+     Página 2: Guia de Recomendações <i data-lucide="arrow-right" class="w-4 h-4"></i>
+    </button>
+   </nav>
+   <div id="page-1" class="space-y-6">
+    <header class="text-center mb-8">
+     <h1 class="font-bold border-b-4 border-yellow-400 inline-block pb-1 text-3xl text-blue-900">Relatório Técnico</h1>
+    </header>
+    <form id="report-form" class="space-y-6 bg-white rounded-xl p-6 md:p-8 shadow-md">
      <div class="space-y-3">
-      <h2 data-template-id="title-sec1" class="canva-text section-title">1. Descrição do problema</h2>
       <div>
-       <label data-template-id="label-o-que" class="canva-text text-sm" for="desc_oq">O que aconteceu?</label> <textarea id="desc_oq" rows="2" class="w-full border border-gray-300 rounded p-2 mt-1 text-sm"></textarea>
+       <label class="font-medium" for="nome_grupo">Nome do Grupo:</label>
+       <input id="nome_grupo" type="text" class="w-full border-b-2 border-gray-300 focus:border-blue-600 outline-none py-1 mt-1">
       </div>
       <div>
-       <label data-template-id="label-onde" class="canva-text text-sm" for="desc_onde">Onde circulou?</label> <textarea id="desc_onde" rows="2" class="w-full border border-gray-300 rounded p-2 mt-1 text-sm"></textarea>
+       <label class="font-medium" for="problema_digital">Problema Digital Identificado:</label>
+       <input id="problema_digital" type="text" class="w-full border-b-2 border-gray-300 focus:border-blue-600 outline-none py-1 mt-1">
       </div>
       <div>
-       <label data-template-id="label-quem" class="canva-text text-sm" for="desc_quem">Quem foi impactado?</label> <textarea id="desc_quem" rows="2" class="w-full border border-gray-300 rounded p-2 mt-1 text-sm"></textarea>
+       <label class="font-medium" for="area_conhecimento">Área do Conhecimento:</label>
+       <input id="area_conhecimento" type="text" class="w-full border-b-2 border-gray-300 focus:border-blue-600 outline-none py-1 mt-1">
       </div>
      </div>
-     <div class="space-y-3">
-      <h2 data-template-id="title-sec3" class="canva-text section-title">3. Diagnóstico dos riscos sociais</h2>
-      <table class="w-full text-sm border">
-       <thead>
-        <tr class="bg-blue-600 text-white">
-         <th class="p-2 text-left">Tipo de impacto</th>
-         <th class="p-2 text-left">Descrição</th>
-        </tr>
-       </thead>
-       <tbody>
-        <tr class="border-b">
-         <td class="p-2 font-medium">Informacional</td>
-         <td class="p-2"><input id="imp_info" type="text" class="w-full border-b border-gray-300 outline-none"></td>
-        </tr>
-        <tr class="border-b">
-         <td class="p-2 font-medium">Econômico</td>
-         <td class="p-2"><input id="imp_econ" type="text" class="w-full border-b border-gray-300 outline-none"></td>
-        </tr>
-        <tr class="border-b">
-         <td class="p-2 font-medium">Emocional</td>
-         <td class="p-2"><input id="imp_emoc" type="text" class="w-full border-b border-gray-300 outline-none"></td>
-        </tr>
-        <tr>
-         <td class="p-2 font-medium">Coletivo</td>
-         <td class="p-2"><input id="imp_col" type="text" class="w-full border-b border-gray-300 outline-none"></td>
-        </tr>
-       </tbody>
-      </table>
+
+     <div class="grid md:grid-cols-2 gap-6">
+      <div class="space-y-3">
+       <h2 class="section-title">1. Descrição do problema</h2>
+       <div>
+        <label class="text-sm" for="desc_oq">O que aconteceu?</label>
+        <textarea id="desc_oq" rows="2" class="w-full border border-gray-300 rounded p-2 mt-1 text-sm"></textarea>
+       </div>
+       <div>
+        <label class="text-sm" for="desc_onde">Onde circulou?</label>
+        <textarea id="desc_onde" rows="2" class="w-full border border-gray-300 rounded p-2 mt-1 text-sm"></textarea>
+       </div>
+       <div>
+        <label class="text-sm" for="desc_quem">Quem foi impactado?</label>
+        <textarea id="desc_quem" rows="2" class="w-full border border-gray-300 rounded p-2 mt-1 text-sm"></textarea>
+       </div>
+      </div>
+      <div class="space-y-3">
+       <h2 class="section-title">3. Diagnóstico dos riscos sociais</h2>
+       <table class="w-full text-sm border">
+        <thead>
+         <tr class="bg-blue-600 text-white">
+          <th class="p-2 text-left">Tipo de impacto</th>
+          <th class="p-2 text-left">Descrição</th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr class="border-b">
+          <td class="p-2 font-medium">Informacional</td>
+          <td class="p-2"><input id="imp_info" type="text" class="w-full border-b border-gray-300 outline-none"></td>
+         </tr>
+         <tr class="border-b">
+          <td class="p-2 font-medium">Econômico</td>
+          <td class="p-2"><input id="imp_econ" type="text" class="w-full border-b border-gray-300 outline-none"></td>
+         </tr>
+         <tr class="border-b">
+          <td class="p-2 font-medium">Emocional</td>
+          <td class="p-2"><input id="imp_emoc" type="text" class="w-full border-b border-gray-300 outline-none"></td>
+         </tr>
+         <tr>
+          <td class="p-2 font-medium">Coletivo</td>
+          <td class="p-2"><input id="imp_col" type="text" class="w-full border-b border-gray-300 outline-none"></td>
+         </tr>
+        </tbody>
+       </table>
+      </div>
      </div>
-    </div><!-- Section 2 & 4 -->
-    <div class="grid md:grid-cols-2 gap-6">
-     <div class="space-y-3">
-      <h2 data-template-id="title-sec2" class="canva-text section-title">2. Identificação da causa raiz</h2>
-      <p data-template-id="label-causa-intro" class="canva-text text-sm">Marque as causas que contribuem para o problema:</p>
+
+     <div class="grid md:grid-cols-2 gap-6">
+      <div class="space-y-3">
+       <h2 class="section-title">2. Identificação da causa raiz</h2>
+       <p class="text-sm">Marque as causas que contribuem para o problema:</p>
+       <div class="space-y-1 text-sm">
+        <label class="flex items-center gap-2"><input type="checkbox" id="causa_ia"> <span>Uso indevido de IA</span></label>
+        <label class="flex items-center gap-2"><input type="checkbox" id="causa_eng"> <span>Busca por engajamento</span></label>
+        <label class="flex items-center gap-2"><input type="checkbox" id="causa_ver"> <span>Falta de verificação</span></label>
+        <label class="flex items-center gap-2"><input type="checkbox" id="causa_des"> <span>Desinformação intencional</span></label>
+       </div>
+       <div>
+        <label class="text-sm" for="causa_exp">Explicação detalhada da causa raiz:</label>
+        <textarea id="causa_exp" rows="2" class="w-full border border-gray-300 rounded p-2 mt-1 text-sm"></textarea>
+       </div>
+      </div>
+      <div class="space-y-3">
+       <h2 class="section-title">4. Fundamentação da análise</h2>
+       <div>
+        <label class="text-sm" for="fund_conc">Conceitos teóricos utilizados:</label>
+        <textarea id="fund_conc" rows="2" class="w-full border border-gray-300 rounded p-2 mt-1 text-sm"></textarea>
+       </div>
+       <div>
+        <label class="text-sm" for="fund_just">Justificativa da análise:</label>
+        <textarea id="fund_just" rows="2" class="w-full border border-gray-300 rounded p-2 mt-1 text-sm"></textarea>
+       </div>
+      </div>
+     </div>
+     <div class="grid md:grid-cols-2 gap-6">
+      <div class="space-y-3">
+       <h2 class="section-title">5. Recomendações públicas</h2>
+       <div>
+        <label class="text-sm" for="rec_prof">Profissional ou instituição recomendada:</label>
+        <textarea id="rec_prof" rows="2" class="w-full border border-gray-300 rounded p-2 mt-1 text-sm"></textarea>
+       </div>
+       <div>
+        <label class="text-sm" for="rec_acoes">Ações recomendadas:</label>
+        <textarea id="rec_acoes" rows="2" class="w-full border border-gray-300 rounded p-2 mt-1 text-sm"></textarea>
+       </div>
+      </div>
+      <div class="space-y-3">
+       <h2 class="section-title">6. Produção final de comunicação</h2>
+       <div class="space-y-1 text-sm">
+        <label class="flex items-center gap-2"><input type="checkbox" id="prod_slides"> <span>Slides</span></label>
+        <label class="flex items-center gap-2"><input type="checkbox" id="prod_cartaz"> <span>Cartaz</span></label>
+        <label class="flex items-center gap-2"><input type="checkbox" id="prod_outros"> <span>Outros formatos</span></label>
+       </div>
+       <div>
+        <label class="text-sm" for="campanha">Descrição da campanha de comunicação:</label>
+        <textarea id="campanha" rows="2" class="w-full border border-gray-300 rounded p-2 mt-1 text-sm"></textarea>
+       </div>
+      </div>
+     </div>
+
+     <div class="border-t pt-4 space-y-3">
+      <h2 class="section-title">Checklist de verificação</h2>
       <div class="space-y-1 text-sm">
-       <label class="flex items-center gap-2"><input type="checkbox" id="causa_ia"> <span>Uso indevido de IA</span></label> <label class="flex items-center gap-2"><input type="checkbox" id="causa_eng"> <span>Busca por engajamento</span></label> <label class="flex items-center gap-2"><input type="checkbox" id="causa_ver"> <span>Falta de verificação</span></label> <label class="flex items-center gap-2"><input type="checkbox" id="causa_des"> <span>Desinformação intencional</span></label>
-      </div>
-      <div>
-       <label data-template-id="label-causa-exp" class="canva-text text-sm" for="causa_exp">Explicação detalhada da causa raiz:</label> <textarea id="causa_exp" rows="2" class="w-full border border-gray-300 rounded p-2 mt-1 text-sm"></textarea>
-      </div>
-     </div>
-     <div class="space-y-3">
-      <h2 data-template-id="title-sec4" class="canva-text section-title">4. Fundamentação da análise</h2>
-      <div>
-       <label data-template-id="label-conceitos" class="canva-text text-sm" for="fund_conc">Conceitos teóricos utilizados:</label> <textarea id="fund_conc" rows="2" class="w-full border border-gray-300 rounded p-2 mt-1 text-sm"></textarea>
-      </div>
-      <div>
-       <label data-template-id="label-justificativa" class="canva-text text-sm" for="fund_just">Justificativa da análise:</label> <textarea id="fund_just" rows="2" class="w-full border border-gray-300 rounded p-2 mt-1 text-sm"></textarea>
+       <label class="flex items-center gap-2"><input type="checkbox" id="ck_causa"> <span>Identificamos a causa raiz</span></label>
+       <label class="flex items-center gap-2"><input type="checkbox" id="ck_riscos"> <span>Diagnosticamos riscos sociais</span></label>
+       <label class="flex items-center gap-2"><input type="checkbox" id="ck_analise"> <span>Fundamentamos a análise</span></label>
+       <label class="flex items-center gap-2"><input type="checkbox" id="ck_rec"> <span>Elaboramos recomendações estruturadas</span></label>
       </div>
      </div>
-    </div><!-- Section 5 & 6 -->
-    <div class="grid md:grid-cols-2 gap-6">
-     <div class="space-y-3">
-      <h2 data-template-id="title-sec5" class="canva-text section-title">5. Recomendações públicas</h2>
+
+     <div class="flex flex-col sm:flex-row gap-3">
+      <button type="submit" class="flex-1 py-3 rounded-lg font-semibold text-lg bg-blue-600 hover:bg-blue-700 text-white transition-colors">Enviar Relatório</button>
+      <button id="download-btn" type="button" class="flex-1 py-3 rounded-lg font-semibold text-lg bg-green-600 hover:bg-green-700 text-white flex items-center justify-center gap-2 transition-colors"><i data-lucide="download" class="w-5 h-5"></i> Baixar PDF</button>
+     </div>
+     <div class="text-center pt-2">
+      <button type="button" onclick="switchPage(2)" class="text-blue-600 hover:underline font-semibold text-sm flex items-center justify-center gap-1 mx-auto">
+       Avançar para o Guia de Recomendações <i data-lucide="arrow-right" class="w-4 h-4"></i>
+      </button>
+     </div>
+    </form>
+   </div>
+   <div id="page-2" class="space-y-6 hidden">
+    <header class="text-center mb-6">
+     <h1 class="font-bold border-b-4 border-yellow-400 inline-block pb-1 text-3xl text-blue-900">Guia de Recomendações Públicas</h1>
+    </header>
+
+    <form id="guia-form" class="space-y-6 bg-white rounded-xl p-6 md:p-8 shadow-md border-t-4 border-blue-600">
+     <div class="bg-amber-50 border border-amber-200 p-4 rounded-xl space-y-3">
       <div>
-       <label data-template-id="label-profissional" class="canva-text text-sm" for="rec_prof">Profissional ou instituição recomendada:</label> <textarea id="rec_prof" rows="2" class="w-full border border-gray-300 rounded p-2 mt-1 text-sm"></textarea>
+       <label class="font-medium text-blue-900" for="guia_nome_grupo">Nome do Grupo:</label>
+       <input id="guia_nome_grupo" type="text" class="w-full border-b-2 border-gray-300 bg-transparent focus:border-blue-600 outline-none py-1 mt-1">
       </div>
       <div>
-       <label data-template-id="label-acoes" class="canva-text text-sm" for="rec_acoes">Ações recomendadas:</label> <textarea id="rec_acoes" rows="2" class="w-full border border-gray-300 rounded p-2 mt-1 text-sm"></textarea>
+       <label class="font-medium text-blue-900" for="guia_problema">Problema digital analisado:</label>
+       <input id="guia_problema" type="text" class="w-full border-b-2 border-gray-300 bg-transparent focus:border-blue-600 outline-none py-1 mt-1">
       </div>
      </div>
-     <div class="space-y-3">
-      <h2 data-template-id="title-sec6" class="canva-text section-title">6. Produção final de comunicação</h2>
-      <div class="space-y-1 text-sm">
-       <label class="flex items-center gap-2"><input type="checkbox" id="prod_slides"> <span>Slides</span></label> <label class="flex items-center gap-2"><input type="checkbox" id="prod_cartaz"> <span>Cartaz</span></label> <label class="flex items-center gap-2"><input type="checkbox" id="prod_outros"> <span>Outros formatos</span></label>
+     <div class="grid md:grid-cols-2 gap-6">
+      <div class="space-y-4">
+       <h2 class="section-title">1. Linguagem e público</h2>
+       <div>
+        <label class="text-sm font-semibold text-blue-900 block mb-1">Para quem é a campanha?</label>
+        <textarea id="guia_publico" rows="3" class="w-full border border-gray-300 rounded p-2 text-sm" placeholder="Descreva o público-alvo..."></textarea>
+       </div>
+       <div>
+        <label class="text-sm font-semibold text-blue-900 block mb-1">Qual é a linguagem que vocês irão adotar?</label>
+        <p class="text-xs text-gray-500 mb-1">Tipos de comunicação: verbal (oral/escrita), não verbal (gestos/expressões), visual (gráficos/imagens) e digital (tecnologias).</p>
+        <textarea id="guia_linguagem" rows="3" class="w-full border border-gray-300 rounded p-2 text-sm" placeholder="Explique a linguagem e meios de comunicação..."></textarea>
+       </div>
       </div>
-      <div>
-       <label data-template-id="label-campanha" class="canva-text text-sm" for="campanha">Descrição da campanha de comunicação:</label> <textarea id="campanha" rows="2" class="w-full border border-gray-300 rounded p-2 mt-1 text-sm"></textarea>
+
+      <div class="space-y-4">
+       <h2 class="section-title">2. Explicação técnica simplificada do problema</h2>
+       <div>
+        <label class="text-sm font-semibold text-blue-900 block mb-1">Como vocês vão explicar o caso para o público?</label>
+        <textarea id="guia_explicacao" rows="6" class="w-full border border-gray-300 rounded p-2 text-sm" placeholder="Resumo didático e simplificado do problema técnico..."></textarea>
+       </div>
       </div>
      </div>
-    </div><!-- Checklist -->
-    <div class="border-t pt-4 space-y-3">
-     <h2 data-template-id="title-checklist" class="canva-text section-title">Checklist de verificação</h2>
-     <div class="space-y-1 text-sm">
-      <label class="flex items-center gap-2"><input type="checkbox" id="ck_causa"> <span>Identificamos a causa raiz</span></label> <label class="flex items-center gap-2"><input type="checkbox" id="ck_riscos"> <span>Diagnosticamos riscos sociais</span></label> <label class="flex items-center gap-2"><input type="checkbox" id="ck_analise"> <span>Fundamentamos a análise</span></label> <label class="flex items-center gap-2"><input type="checkbox" id="ck_rec"> <span>Elaboramos recomendações estruturadas</span></label>
+     <div class="grid md:grid-cols-2 gap-6 pt-4 border-t">
+      <div class="space-y-4">
+       <h2 class="section-title">3. Impactos sociais identificados</h2>
+       <div>
+        <label class="text-sm font-semibold text-blue-900 block mb-1">Quais consequências serão destacadas?</label>
+        <textarea id="guia_consequencias" rows="5" class="w-full border border-gray-300 rounded p-2 text-sm" placeholder="Detalhe as consequências sociais abordadas na campanha..."></textarea>
+       </div>
+      </div>
+
+      <div class="space-y-4">
+       <h2 class="section-title">4. Recomendações públicas objetivas</h2>
+       <p class="text-xs font-medium text-gray-600 mb-2">Perguntem-se:</p>
+       
+       <div class="space-y-3 text-sm">
+        <div>
+         <label class="block font-medium text-blue-900 text-xs mb-1">a) O que os usuários podem fazer para reduzir o problema?</label>
+         <textarea id="guia_rec_a" rows="2" class="w-full border border-gray-300 rounded p-2 text-sm"></textarea>
+        </div>
+        <div>
+         <label class="block font-medium text-blue-900 text-xs mb-1">b) Que orientações educativas podem ser divulgadas?</label>
+         <textarea id="guia_rec_b" rows="2" class="w-full border border-gray-300 rounded p-2 text-sm"></textarea>
+        </div>
+        <div>
+         <label class="block font-medium text-blue-900 text-xs mb-1">c) Que medidas podem fortalecer a conscientização digital?</label>
+         <textarea id="guia_rec_c" rows="2" class="w-full border border-gray-300 rounded p-2 text-sm"></textarea>
+        </div>
+        <div>
+         <label class="block font-medium text-blue-900 text-xs mb-1">d) As propostas respeitam diferentes públicos e contextos sociais?</label>
+         <textarea id="guia_rec_d" rows="2" class="w-full border border-gray-300 rounded p-2 text-sm"></textarea>
+        </div>
+       </div>
+      </div>
      </div>
-    </div><!-- Form actions -->
-    <div class="flex flex-col sm:flex-row gap-3"><button data-template-id="submit-btn" type="submit" class="canva-button flex-1 py-3 rounded-lg font-semibold text-lg bg-blue-600 hover:bg-blue-700 text-white transition-colors">Enviar Relatório</button> <button id="download-btn" type="button" class="canva-button flex-1 py-3 rounded-lg font-semibold text-lg bg-green-600 hover:bg-green-700 text-white flex items-center justify-center gap-2 transition-colors"><i data-lucide="download" class="w-5 h-5"></i> Baixar PDF</button>
-    </div>
-    <p id="status-msg" class="text-center text-sm hidden"></p>
-   </form><!-- Submitted reports -->
+     <div class="flex flex-col sm:flex-row gap-3 pt-4 border-t">
+      <button type="button" onclick="switchPage(1)" class="flex-1 py-3 rounded-lg font-semibold text-lg bg-gray-200 hover:bg-gray-300 text-gray-700 transition-colors flex items-center justify-center gap-2">
+       <i data-lucide="arrow-left" class="w-5 h-5"></i> Voltar ao Relatório
+      </button>
+      <button id="download-guia-btn" type="button" class="flex-1 py-3 rounded-lg font-semibold text-lg bg-blue-600 hover:bg-blue-700 text-white flex items-center justify-center gap-2 transition-colors">
+       <i data-lucide="download" class="w-5 h-5"></i> Baixar Guia em PDF
+      </button>
+     </div>
+    </form>
+   </div>
    <section id="reports-section" class="mt-10 hidden">
-    <h2 data-template-id="title-reports" class="canva-text font-bold text-xl mb-4 text-blue-900">Relatórios Enviados</h2>
+    <h2 class="font-bold text-xl mb-4 text-blue-900">Relatórios Enviados</h2>
     <div id="reports-list" class="space-y-4"></div>
    </section>
   </main>
-  <script src="/_sdk/b8fc9aac2a1ee7fa.editing_sdk.js" integrity="sha512-0BDfjlda5WnGBb/gQP/bLynj6/01veZ9b+fYg78jNuknRGKsUHsXKtTCAOVAPQK2g457p9USMdsRyZFo8+UgRA=="></script>
+
   <script>
-        let allData = [];
+        function switchPage(pageNum) {
+            const p1 = document.getElementById('page-1');
+            const p2 = document.getElementById('page-2');
+            const btn1 = document.getElementById('nav-btn-1');
+            const btn2 = document.getElementById('nav-btn-2');
 
-        const handler = {
-            onDataChanged(data) {
-                allData = data;
-                renderReports(data);
+            if (pageNum === 1) {
+                p1.classList.remove('hidden');
+                p2.classList.add('hidden');
+                btn1.className = 'px-4 py-2 rounded-lg font-semibold text-sm bg-blue-600 text-white shadow transition-all';
+                btn2.className = 'px-4 py-2 rounded-lg font-semibold text-sm bg-gray-200 text-gray-700 hover:bg-gray-300 transition-all flex items-center gap-1';
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            } else {
+                p1.classList.add('hidden');
+                p2.classList.remove('hidden');
+                btn2.className = 'px-4 py-2 rounded-lg font-semibold text-sm bg-blue-600 text-white shadow transition-all flex items-center gap-1';
+                btn1.className = 'px-4 py-2 rounded-lg font-semibold text-sm bg-gray-200 text-gray-700 hover:bg-gray-300 transition-all';
+                
+                const nomeGrupo = document.getElementById('nome_grupo').value;
+                const probDigital = document.getElementById('problema_digital').value;
+                if (nomeGrupo && !document.getElementById('guia_nome_grupo').value) {
+                    document.getElementById('guia_nome_grupo').value = nomeGrupo;
+                }
+                if (probDigital && !document.getElementById('guia_problema').value) {
+                    document.getElementById('guia_problema').value = probDigital;
+                }
+
+                window.scrollTo({ top: 0, behavior: 'smooth' });
             }
-        };
-
-        (async () => {
-            const r = await window.dataSdk.init(handler);
-            if (!r.isOk) showStatus('Erro ao conectar.', true);
-        })();
+            if (window.lucide) lucide.createIcons();
+        }
 
         const form = document.getElementById('report-form');
         form.addEventListener('submit', async (e) => {
             e.preventDefault();
-            const btn = form.querySelector('[data-template-id="submit-btn"]');
+            const btn = form.querySelector('button[type="submit"]');
             btn.disabled = true;
             btn.style.opacity = '0.5';
 
-            const record = {
-                nome_grupo: v('nome_grupo'),
-                problema_digital: v('problema_digital'),
-                area_conhecimento: v('area_conhecimento'),
-                descricao_o_que_aconteceu: v('desc_oq'),
-                descricao_onde_circulou: v('desc_onde'),
-                descricao_quem_impactado: v('desc_quem'),
-                causa_raiz_uso_ia: ck('causa_ia'),
-                causa_raiz_engajamento: ck('causa_eng'),
-                causa_raiz_verificacao: ck('causa_ver'),
-                causa_raiz_desinformacao: ck('causa_des'),
-                causa_raiz_explicacao: v('causa_exp'),
-                impacto_informacional: v('imp_info'),
-                impacto_economico: v('imp_econ'),
-                impacto_emocional: v('imp_emoc'),
-                impacto_coletivo: v('imp_col'),
-                fundamentacao_conceitos: v('fund_conc'),
-                fundamentacao_justificativa: v('fund_just'),
-                recomendacao_profissional: v('rec_prof'),
-                recomendacao_acoes: v('rec_acoes'),
-                producao_slides: ck('prod_slides'),
-                producao_cartaz: ck('prod_cartaz'),
-                producao_outros: ck('prod_outros'),
-                campanha_descricao: v('campanha'),
-                checklist_causa_raiz: ck('ck_causa'),
-                checklist_riscos: ck('ck_riscos'),
-                checklist_analise: ck('ck_analise'),
-                checklist_recomendacoes: ck('ck_rec'),
-                submitted_at: new Date().toISOString()
-            };
-
-            const res = await window.dataSdk.create(record);
-            btn.disabled = false;
-            btn.style.opacity = '1';
-            if (res.isOk) {
-                showStatus('Relatório enviado com sucesso!', false);
+            setTimeout(() => {
+                btn.disabled = false;
+                btn.style.opacity = '1';
+                alert('Relatório enviado com sucesso!');
                 form.reset();
-            } else {
-                showStatus('Erro ao enviar. Tente novamente.', true);
-            }
+            }, 500);
         });
 
-        function v(id) { return document.getElementById(id).value.trim(); }
-        function ck(id) { return document.getElementById(id).checked; }
-
-        function showStatus(msg, isError) {
-            const el = document.getElementById('status-msg');
-            el.textContent = msg;
-            el.className = 'text-center text-sm mt-2 ' + (isError ? 'text-red-600' : 'text-green-600');
-            el.classList.remove('hidden');
-            setTimeout(() => el.classList.add('hidden'), 4000);
+        function v(id) { 
+            const el = document.getElementById(id);
+            return el ? el.value.trim() : ''; 
         }
 
-        function renderReports(data) {
-            const section = document.getElementById('reports-section');
-            const list = document.getElementById('reports-list');
-            if (!data.length) { section.classList.add('hidden'); return; }
-            section.classList.remove('hidden');
-
-            const existing = new Map([...list.children].map(el => [el.dataset.id, el]));
-            const ids = new Set(data.map(d => d.__backendId));
-
-            existing.forEach((el, id) => { if (!ids.has(id)) el.remove(); });
-
-            data.sort((a, b) => (b.submitted_at || '').localeCompare(a.submitted_at || ''));
-
-            data.forEach(item => {
-                if (existing.has(item.__backendId)) return;
-                const card = document.createElement('details');
-                card.dataset.id = item.__backendId;
-                card.className = 'bg-white rounded-lg shadow p-4 cursor-pointer';
-                const date = item.submitted_at ? new Date(item.submitted_at).toLocaleDateString('pt-BR') : '';
-                card.innerHTML = `<summary class="font-semibold text-blue-800">${esc(item.nome_grupo || 'Sem nome')} — ${esc(item.problema_digital || '')} <span class="text-gray-400 text-xs ml-2">${date}</span></summary>
-                <div class="mt-3 text-sm space-y-1 text-gray-700">
-                    <p><strong>Área:</strong> ${esc(item.area_conhecimento)}</p>
-                    <p><strong>O que aconteceu:</strong> ${esc(item.descricao_o_que_aconteceu)}</p>
-                    <p><strong>Onde circulou:</strong> ${esc(item.descricao_onde_circulou)}</p>
-                    <p><strong>Quem foi impactado:</strong> ${esc(item.descricao_quem_impactado)}</p>
-                    <p><strong>Causa raiz:</strong> ${esc(item.causa_raiz_explicacao)}</p>
-                    <p><strong>Impactos:</strong> Info: ${esc(item.impacto_informacional)} | Econ: ${esc(item.impacto_economico)} | Emoc: ${esc(item.impacto_emocional)} | Col: ${esc(item.impacto_coletivo)}</p>
-                    <p><strong>Conceitos:</strong> ${esc(item.fundamentacao_conceitos)}</p>
-                    <p><strong>Justificativa:</strong> ${esc(item.fundamentacao_justificativa)}</p>
-                    <p><strong>Recomendações:</strong> ${esc(item.recomendacao_profissional)} — ${esc(item.recomendacao_acoes)}</p>
-                </div>`;
-                list.appendChild(card);
-            });
-        }
-
-        function esc(s) { if (!s) return ''; const d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
-        function escMultiline(s) { return esc(s).replace(/\n/g, '<br>'); }
-
-        function makePdfPure(groupName) {
+        document.getElementById('download-guia-btn').addEventListener('click', function () {
             var jsPDF = (window.jspdf && window.jspdf.jsPDF) ? window.jspdf.jsPDF : null;
             if (!jsPDF) {
-                if (typeof html2pdf === 'undefined') throw new Error('Nenhuma biblioteca PDF carregou. Verifique sua conexao com a internet.');
-                throw new Error('jsPDF nao carregou. Recarregue a pagina (F5) e tente novamente.');
+                alert('Biblioteca PDF não carregada. Tente novamente.');
+                return;
             }
+
             var doc = new jsPDF({ unit: 'mm', format: 'a4', orientation: 'p' });
             var pageW = 210, pageH = 297;
-            var pageBottom = pageH - 20;
             var marginL = 17, marginR = 17, contentW = pageW - marginL - marginR;
             var y = 20;
             var lineH = 5;
-            var sectionY;
 
             function newPageAtTop() {
                 doc.addPage();
                 y = 22;
-                sectionY = y;
             }
 
             function ensureSpace(needed) {
-                if (y + needed > pageBottom) newPageAtTop();
+                if (y + needed > pageH - 20) newPageAtTop();
             }
 
-            function reserveBefore(minSpace) {
-                if (y + minSpace > pageBottom) newPageAtTop();
-            }
-
-            function setFont(size, bold, colorR, colorG, colorB) {
+            function textWrap(txt, size, bold, color, indent) {
+                indent = indent || 0;
+                var isEmpty = !txt || txt.trim().length === 0;
+                var text = isEmpty ? 'Não informado' : txt;
                 doc.setFont('helvetica', bold ? 'bold' : 'normal');
                 doc.setFontSize(size);
-                if (typeof colorR === 'number') doc.setTextColor(colorR, colorG, colorB);
+                if (color) doc.setTextColor(color[0], color[1], color[2]);
                 else doc.setTextColor(17, 24, 39);
-            }
-
-            function setDraw(r, g, b) { doc.setDrawColor(r, g, b); }
-            function setFill(r, g, b) { doc.setFillColor(r, g, b); }
-
-            function textWrap(txt, size, bold, color, indent, placeholder) {
-                indent = indent || 0;
-                var isEmpty = !txt || (typeof txt === 'string' && txt.trim().length === 0);
-                var text = isEmpty ? (placeholder || 'Nao informado') : txt;
-                setFont(size, bold, color ? color[0] : null, color ? color[1] : null, color ? color[2] : null);
                 if (isEmpty) doc.setTextColor(156, 163, 175);
                 var lines = doc.splitTextToSize(text, contentW - indent);
                 for (var i = 0; i < lines.length; i++) {
@@ -299,236 +344,112 @@
                     doc.text(lines[i], marginL + indent, y);
                     y += lineH;
                 }
-                y += 0.5;
-            }
-
-            function h2(num, title, reserveBelow) {
-                reserveBelow = reserveBelow || 24;
-                reserveBefore(reserveBelow);
-                y += 3;
-                sectionY = y;
-                setFont(14, true, 30, 58, 138);
-                doc.text(num + '.  ' + title, marginL, y);
-                var titleH = 3.5;
-                var barH = 0.9;
-                var gapAfter = 4.5;
-                var totalHeader = titleH + barH + gapAfter;
-                ensureSpace(totalHeader);
-                y += titleH;
-                setFill(59, 130, 246);
-                doc.rect(marginL, y, 50, barH, 'F');
-                y += barH + gapAfter;
-            }
-
-            function label(labelTxt) {
-                ensureSpace(lineH + 1);
-                setFont(11, true, 17, 24, 39);
-                doc.text(labelTxt, marginL, y);
-                y += lineH + 0.3;
-            }
-
-            function bulletItem(txt, indent) {
-                indent = indent || 4;
-                ensureSpace(lineH + 1);
-                setFont(11, false, 17, 24, 39);
-                var isEmpty = !txt || (typeof txt === 'string' && txt.trim().length === 0);
-                var text = isEmpty ? 'Nao informado' : txt;
-                if (isEmpty) doc.setTextColor(156, 163, 175);
-                setFill(37, 99, 235);
-                doc.circle(marginL + indent - 2.6, y - 1.5, 0.9, 'F');
-                var lines = doc.splitTextToSize(text, contentW - indent);
-                for (var i = 0; i < lines.length; i++) {
-                    ensureSpace(lineH);
-                    doc.text(lines[i], marginL + indent, y);
-                    y += lineH;
-                }
-                y += 0.5;
-            }
-
-            function checkBox(text, checked, indent) {
-                indent = indent || 5;
-                ensureSpace(lineH + 1.5);
-                setFont(11, false, 17, 24, 39);
-                var boxX = marginL + indent - 0.8;
-                var boxY = y - 3.4;
-                var boxSize = 3.4;
-                if (checked) {
-                    setFill(37, 99, 235);
-                    setDraw(29, 78, 216);
-                    doc.rect(boxX, boxY, boxSize, boxSize, 'FD');
-                    setDraw(255, 255, 255);
-                    doc.setLineWidth(0.55);
-                    doc.line(boxX + 0.8, boxY + 1.7, boxX + 1.5, boxY + 2.5);
-                    doc.line(boxX + 1.5, boxY + 2.5, boxX + 2.8, boxY + 1.0);
-                    doc.setLineWidth(0.2);
-                    doc.setTextColor(30, 64, 175);
-                    setFont(11, true, 30, 64, 175);
-                } else {
-                    setFill(255, 255, 255);
-                    setDraw(156, 163, 175);
-                    doc.rect(boxX, boxY, boxSize, boxSize, 'FD');
-                    doc.setTextColor(107, 114, 128);
-                }
-                doc.text(text, marginL + indent + 4.5, y);
-                y += lineH + 1;
-            }
-
-            function sectionDivider() {
-                ensureSpace(3);
                 y += 1;
             }
 
-            // ============= HEADER / TÍTULO =============
-            setFont(22, true, 30, 58, 95);
-            var titleStr = 'Relatorio Tecnico';
+            function h2(num, title) {
+                ensureSpace(18);
+                y += 4;
+                doc.setFont('helvetica', 'bold');
+                doc.setFontSize(13);
+                doc.setTextColor(30, 64, 175);
+                doc.text(num + '. ' + title, marginL, y);
+                y += 3;
+                doc.setFillColor(59, 130, 246);
+                doc.rect(marginL, y, 45, 0.8, 'F');
+                y += 5;
+            }
+
+            function label(txt) {
+                ensureSpace(lineH + 1);
+                doc.setFont('helvetica', 'bold');
+                doc.setFontSize(10);
+                doc.setTextColor(30, 58, 95);
+                doc.text(txt, marginL, y);
+                y += lineH;
+            }
+
+            doc.setFont('helvetica', 'bold');
+            doc.setFontSize(20);
+            doc.setTextColor(30, 58, 95);
+            var titleStr = 'Guia de Recomendacoes Publicas';
             var titleW = doc.getTextWidth(titleStr);
             var titleX = (pageW - titleW) / 2;
             doc.text(titleStr, titleX, y);
             y += 4;
-            setFill(251, 191, 36);
+            doc.setFillColor(251, 191, 36);
             doc.rect(titleX - 5, y, titleW + 10, 1.3, 'F');
-            y += 8;
+            y += 10;
 
-            // Header info box
-            setFill(239, 246, 255);
-            setDraw(191, 219, 254);
-            var infoBoxH = 28;
-            var boxY = y - 3;
-            doc.roundedRect(marginL - 2, boxY, contentW + 4, infoBoxH, 2, 2, 'FD');
-            y = boxY + 8;
-
-            setFont(11, true, 30, 58, 95);
+            doc.setFillColor(254, 243, 199);
+            doc.setDrawColor(252, 211, 77);
+            doc.roundedRect(marginL - 2, y, contentW + 4, 24, 2, 2, 'FD');
+            y += 6;
+            doc.setFont('helvetica', 'bold');
+            doc.setFontSize(10);
+            doc.setTextColor(30, 58, 95);
             doc.text('Nome do Grupo:', marginL, y);
-            setFont(11, false, 17, 24, 39);
-            doc.text(v('nome_grupo') || 'Nao informado', marginL + 40, y);
+            doc.setFont('helvetica', 'normal');
+            doc.setTextColor(17, 24, 39);
+            doc.text(v('guia_nome_grupo') || 'Nao informado', marginL + 32, y);
             y += 7;
+            doc.setFont('helvetica', 'bold');
+            doc.setTextColor(30, 58, 95);
+            doc.text('Problema digital analisado:', marginL, y);
+            doc.setFont('helvetica', 'normal');
+            doc.setTextColor(17, 24, 39);
+            doc.text(v('guia_problema') || 'Nao informado', marginL + 48, y);
+            y += 14;
 
-            setFont(11, true, 30, 58, 95);
-            doc.text('Problema digital:', marginL, y);
-            setFont(11, false, 17, 24, 39);
-            doc.text(v('problema_digital') || 'Nao informado', marginL + 40, y);
-            y += 7;
+            h2('1', 'Linguagem e publico');
+            label('Para quem e a campanha?');
+            textWrap(v('guia_publico'), 10, false, null, 2);
+            label('Qual e a linguagem que voces irao adotar?');
+            doc.setFont('helvetica', 'italic');
+            doc.setFontSize(8);
+            doc.setTextColor(100, 100, 100);
+            doc.text('Tipos: verbal, nao verbal, visual e digital.', marginL + 2, y);
+            y += 4;
+            textWrap(v('guia_linguagem'), 10, false, null, 2);
 
-            setFont(11, true, 30, 58, 95);
-            doc.text('Area do conhecimento:', marginL, y);
-            setFont(11, false, 17, 24, 39);
-            doc.text(v('area_conhecimento') || 'Nao informado', marginL + 49, y);
+            h2('2', 'Explicacao tecnica simplificada do problema');
+            label('Como voces vao explicar o caso para o publico?');
+            textWrap(v('guia_explicacao'), 10, false, null, 2);
 
-            y = boxY + infoBoxH + 6;
+            h2('3', 'Impactos sociais identificados');
+            label('Quais consequencias serao destacadas?');
+            textWrap(v('guia_consequencias'), 10, false, null, 2);
 
-            // ============= SECTION 1 =============
-            h2('1', 'Descricao do problema digital');
-            label('O que aconteceu?');
-            textWrap(v('desc_oq'), 11, false, null, 3);
-            label('Onde circulou?');
-            textWrap(v('desc_onde'), 11, false, null, 3);
-            label('Quem foi impactado?');
-            textWrap(v('desc_quem'), 11, false, null, 3);
-
-            // ============= SECTION 2 =============
-            h2('2', 'Identificacao da causa raiz');
-            label('Causas identificadas:');
-            checkBox('Uso indevido de IA', ck('causa_ia'), 5);
-            checkBox('Busca por engajamento', ck('causa_eng'), 5);
-            checkBox('Falta de verificacao', ck('causa_ver'), 5);
-            checkBox('Desinformacao intencional', ck('causa_des'), 5);
-            label('Explicacao detalhada da causa raiz:');
-            textWrap(v('causa_exp'), 11, false, null, 3);
-            sectionDivider();
-
-            // ============= SECTION 3 =============
-            h2('3', 'Diagnostico dos riscos sociais');
-            label('Impacto Informacional:');
-            textWrap(v('imp_info'), 11, false, null, 3);
-            label('Impacto Economico:');
-            textWrap(v('imp_econ'), 11, false, null, 3);
-            label('Impacto Emocional:');
-            textWrap(v('imp_emoc'), 11, false, null, 3);
-            label('Impacto Coletivo:');
-            textWrap(v('imp_col'), 11, false, null, 3);
-
-            // ============= SECTION 4 =============
-            h2('4', 'Fundamentacao da analise');
-            label('Conceitos teoricos utilizados:');
-            textWrap(v('fund_conc'), 11, false, null, 3);
-            label('Justificativa da analise:');
-            textWrap(v('fund_just'), 11, false, null, 3);
-
-            // ============= SECTION 5 =============
-            h2('5', 'Recomendacoes publicas');
-            label('Profissional ou instituicao recomendada:');
-            textWrap(v('rec_prof'), 11, false, null, 3);
-            label('Acoes recomendadas:');
-            textWrap(v('rec_acoes'), 11, false, null, 3);
-
-            // ============= SECTION 6 =============
-            h2('6', 'Producao final de comunicacao');
-            label('Formatos de produtos selecionados:');
-            checkBox('Slides', ck('prod_slides'), 5);
-            checkBox('Cartaz', ck('prod_cartaz'), 5);
-            checkBox('Outros formatos', ck('prod_outros'), 5);
-            label('Descricao da campanha de comunicacao:');
-            textWrap(v('campanha'), 11, false, null, 3);
-            sectionDivider();
-
-            // ============= CHECKLIST FINAL =============
-            ensureSpace(18);
-            y += 3;
-            setFont(14, true, 30, 58, 138);
-            var ckTitle = 'Checklist de Verificacao Final';
-            doc.text(ckTitle, marginL, y);
-            y += 3.5;
-            setFill(251, 191, 36);
-            doc.rect(marginL, y, 55, 0.9, 'F');
-            y += 5;
-            setFill(254, 252, 232);
-            setDraw(253, 224, 71);
-            var ckBoxH = 25;
-            var ckBoxY = y - 3;
-            doc.roundedRect(marginL - 2, ckBoxY, contentW + 4, ckBoxH, 2, 2, 'FD');
-            y = ckBoxY + 8;
-            checkBox('Identificamos a causa raiz do problema', ck('ck_causa'), 5);
-            checkBox('Diagnosticamos os riscos sociais envolvidos', ck('ck_riscos'), 5);
-            checkBox('Fundamentamos a analise com conceitos', ck('ck_analise'), 5);
-            checkBox('Elaboramos recomendacoes estruturadas', ck('ck_rec'), 5);
-
-            // Rodapé
+            // Seção 4
+            h2('4', 'Recomendacoes publicas objetivas');
+            doc.setFont('helvetica', 'italic');
             doc.setFontSize(9);
+            doc.setTextColor(70, 70, 70);
+            doc.text('Perguntas norteadoras:', marginL, y);
+            y += 5;
+
+            label('a) O que os usuarios podem fazer para reduzir o problema?');
+            textWrap(v('guia_rec_a'), 10, false, null, 2);
+
+            label('b) Que orientacoes educativas podem ser divulgadas?');
+            textWrap(v('guia_rec_b'), 10, false, null, 2);
+
+            label('c) Que medidas podem fortalecer a conscientizacao digital?');
+            textWrap(v('guia_rec_c'), 10, false, null, 2);
+
+            label('d) As propostas respeitam diferentes publicos e contextos sociais?');
+            textWrap(v('guia_rec_d'), 10, false, null, 2);
+
+            doc.setFontSize(8);
             doc.setTextColor(156, 163, 175);
-            var dataStr = new Date().toLocaleDateString('pt-BR');
-            doc.text('Relatorio gerado em ' + dataStr, marginL, pageH - 10);
-            doc.text('Pagina ' + doc.internal.getNumberOfPages(), pageW - marginR - 20, pageH - 10);
+            doc.text('Guia de Recomendacoes - Gerado em ' + new Date().toLocaleDateString('pt-BR'), marginL, pageH - 10);
+            doc.text('Pagina ' + doc.internal.getNumberOfPages(), pageW - marginR - 15, pageH - 10);
 
-            doc.save((groupName || 'relatorio') + '-relatorio.pdf');
-        }
-
-        document.getElementById('download-btn').addEventListener('click', function () {
-            showStatus('Gerando PDF...', false);
-            var groupName = v('nome_grupo') || 'Relatorio';
-
-            var form = document.getElementById('report-form');
-
-            var overlay = document.createElement('div');
-            overlay.style.cssText = 'position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:9999999;background:#f9fafb;display:flex;align-items:center;justify-content:center;color:#1e3a5f;font-family:Arial,sans-serif;font-weight:bold;font-size:20px;box-shadow:0 0 20px rgba(0,0,0,0.3);';
-            overlay.textContent = 'Gerando PDF...';
-            document.body.appendChild(overlay);
-
-            try {
-                makePdfPure(groupName);
-                setTimeout(function () {
-                    if (overlay.parentNode) overlay.parentNode.removeChild(overlay);
-                    showStatus('PDF gerado com sucesso!', false);
-                }, 500);
-            } catch (e) {
-                console.error('PDF ERRO:', e);
-                if (overlay.parentNode) overlay.parentNode.removeChild(overlay);
-                showStatus('Erro ao gerar PDF: ' + (e.message || e), true);
-            }
+            doc.save((v('guia_nome_grupo') || 'guia') + '-recomendacoes.pdf');
         });
-
         if (window.lucide) {
             lucide.createIcons();
         }
-    </script>
+  </script>
  </body>
 </html>
